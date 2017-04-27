@@ -1,0 +1,32 @@
+
+<section class="container" id="signup">
+	<div class="row center" id="formulaire_sign_up">
+
+	<h1>Inscrit-toi !</h1>
+
+	<%= form_for :user, url: '/users' do |f| %>
+
+		<table class="login">
+			<tr>
+				<td>Nom:</td>
+				<td><%= f.text_field :name %></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><%= f.text_field :email %></td>
+			</tr>
+			<tr>
+				<td>Mot de passe:</td>
+				<td><%= f.password_field :password %></td>
+			</tr>
+			<tr>
+				<td>Confirmation du mot de passe:</td>
+				<td><%= f.password_field :password_confirmation %></td>
+			</tr>
+			<tr>
+				<td colspan="2"><%= f.submit "Inscription" %></td>
+			</tr>	
+		</table>							
+	<% end %>
+
+</section>

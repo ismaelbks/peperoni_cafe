@@ -1,0 +1,18 @@
+!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bienvenue sur le Peperoni-Cafe.com, <%= @user.name %>!</h1>
+    <p>
+      Ton inscription a l'air de s'être bien passé, sinon tu ne lirais pas ce mail.
+      <br>
+      Ton pseudo est : <%= @user.login %>, c'est aussi ton email d'ailleurs.<br>
+    </p>
+    <p>
+      Pour te connecter au site, suis ce lien : <%= @url %>.
+    </p>
+    <p>Merci de nous avoir rejoint et à très bientôt !</p>
+  </body>
+</html>
