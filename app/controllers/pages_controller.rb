@@ -3,8 +3,8 @@ class PagesController < ApplicationController
   	@title = 'Accueil'
   end
 
-  def prestations
-  	@title = 'Prestations'
+  def espace_perso
+  	@title = 'Espace Perso'
   end
 
   def contact

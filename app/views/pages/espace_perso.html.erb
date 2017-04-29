@@ -1,0 +1,59 @@
+<section class="" id="Espaceperso">
+
+	<div class="row" id="perso-backg">
+		<h1>Ton espace personnel</h1>
+	</div>
+
+	<div class="container no-gutters" id="spacebox1">
+		<div class="title-perso">
+			<h2>Mes informations personnelles</h2>
+		</div>
+		<div class="col-md-6 container">
+			<img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg" width="100px"/>
+
+		</div>
+		<div class="col-md-6 container"><br>
+			<table>
+				<tr>
+					<td class="col-*-6 col-xs-12 col-sm-12">Ton Pseudo</td>
+					<td class="col-*-6 col-xs-12 col-sm-12">
+						<% if current_user.pseudo.nil?  %>
+						Ajouter un pseudo ?
+						<% else %>
+						<%= current_user.pseudo %>
+						<% end %>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-*-6 col-xs-12">Ton nom :</td>
+					<td class="col-*-6 col-xs-12"><%= current_user.name %></td>
+				</tr>
+				<tr>
+					<td class="col-*-6 col-xs-12">Ton Email :</td>
+					<td class="col-*-6 col-xs-12"><%= current_user.email %></td>
+				</tr>
+				<tr>
+					<td class="col-*-6 col-xs-12">Ton numéro de téléphone :</td>
+					<td class="col-*-6 col-xs-12">
+						<% if current_user.phone_number.nil?  %>
+						Ajouter mon numéro ?
+						<% else %>
+						<%= current_user.phone_number %>
+						<% end %>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="container" id="spacebox1">
+		<div class="title-perso"> 
+			<h2>Mes informations personnelles</h2> 		
+		</div>
+		<div class="col-6">
+		</div>
+		<div class="col-6">
+		</div>
+	</div>
+
+</section>
