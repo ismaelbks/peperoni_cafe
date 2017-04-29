@@ -6,10 +6,11 @@ class UsersController < ApplicationController
 	def create
 	  user = User.new(user_params)
 	  if user.save
+        UserMailer.welcome_email(user).deliver_later
 	    session[:user_id] = user.id
-	    redirect_to '/pages/home'
+        redirect_to root_path, notice: 'User was successfully created.'
 	  else
-	    redirect_to '/signup'
+        render :new
 	  end
 	end
 	

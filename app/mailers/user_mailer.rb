@@ -8,5 +8,6 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Bienvenue sur le Peperoni Cafe')
   end
 
+
 end
 
