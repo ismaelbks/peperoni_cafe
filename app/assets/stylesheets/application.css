@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+
 * {
     overflow-x:hidden;
     /*border: solid 1px black;*/
@@ -73,6 +75,7 @@ header p {
     margin: 0;
     padding-right: 30px;
 }
+
 
 #login-logout {
     color:#3EEC95;
