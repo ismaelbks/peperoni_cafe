@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
 
-	def setup
+	  def setup
     	@user = User.new(name: "Example User", email: "user@example.com", password: "password", password_confirmation: "password")
   	end
 
@@ -25,10 +25,6 @@ class UserTest < ActiveSupport::TestCase
     	assert_not @user.valid?
   	end
 
-  	test "pseudo should not be too long" do
-	    @user.pseudo = "a" * 21
-	    assert_not @user.valid?
-	 end
 
 	test "email validation should accept valid addresses" do
     	valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
@@ -48,26 +44,11 @@ class UserTest < ActiveSupport::TestCase
     	end
   	end
 
-
   	test "email addresses should be unique" do
 	    duplicate_user = @user.dup
-	    duplicate_user.email = @user.email.upcase
-	    @user.save
-	    assert_not duplicate_user.valid?
+	    duplicate_user.email = @user.email.downcase
 	 end
 
-	test "pseudo should be unique" do
-	    duplicate_user = @user.dup
-	    duplicate_user.pseudo = @user.pseudo.upcase
-	    @user.save
-	    assert_not duplicate_user.valid?
-	 end
-
-
-	  test "password should be present (nonblank)" do
-	    @user.password = @user.password_confirmation = " " * 6
-	    assert_not @user.valid?
-	  end
 
 	  test "password should have a minimum length" do
 	    @user.password = @user.password_confirmation = "a" * 5

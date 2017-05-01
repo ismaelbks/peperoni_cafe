@@ -9,9 +9,6 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX }, 
                     uniqueness: true
 
-    before_save { self.pseudo = pseudo.downcase }
-    validates :pseudo, presence: false, length { maximum: 20 },
-    				uniqueness: true
 
 	has_secure_password
 	validates :password, length: { minimum: 6 }
