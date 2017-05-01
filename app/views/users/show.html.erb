@@ -14,11 +14,11 @@
 			<img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg" width="100px"/>
 
 		</div>
-		<div class="col-md-8 container"><br>
-			<table>
+		<div class="col-md-8 container">
+			<table id="espacepersoinfos">
 				<tr>
 					<td class="col-*-3 container">Pseudo:</td>
-					<td class="col-*-4 container">
+					<td class="col-*-5 container">
 						<% if current_user.pseudo.nil?  %>
 						Pas de pseudo
 						<% else %>
@@ -51,6 +51,12 @@
 						<% else %>
 						<%= current_user.phone_number %>
 						<% end %>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-*-3 container"> Arrivée :</td>
+					<td class="col-*-5 container">
+						<%= current_user.created_at.strftime("%d/%m/%y") %>
 					</td>
 				</tr>
 			</table>

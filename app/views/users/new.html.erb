@@ -5,6 +5,8 @@
 	<h1>Inscrit-toi !</h1>
 
 	<%= form_for :user, url: '/users' do |f| %>
+	  <%= render 'shared/error_messages', object: @user %>
+
 
 		<table class="login">
 			<tr>
