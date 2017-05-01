@@ -21,7 +21,7 @@
       <nav class="col-sm-8">
         <div id="login-logout">
           <% if current_user %>
-          Bonjour, <%= current_user.name %> ! | <%= link_to "X", '/logout'%>
+          Bonjour, <%= current_user.name.capitalize %> ! | <%= link_to "X", '/logout'%>
           <% else %>
           <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
           <% end %>

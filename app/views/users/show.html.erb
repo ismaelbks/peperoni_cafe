@@ -21,7 +21,7 @@
 						<% if current_user.pseudo.nil?  %>
 						Pas de pseudo
 						<% else %>
-						<%= current_user.pseudo %>
+						<%= current_user.pseudo.capitalize %>
 						<% end %>
 					</td>
 				</tr>
