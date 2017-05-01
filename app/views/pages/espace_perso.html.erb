@@ -5,38 +5,49 @@
 	</div>
 
 	<div class="container no-gutters" id="spacebox1">
-		<div class="title-perso">
-			<h2>Mes informations personnelles</h2>
+		<div class="title-perso col-md-12">
+			<div class="col-md-11"><p>Mes informations personnelles</p></div>
+			<div class="col-md-1 link"><%= link_to 'Edit', edit_user_url(current_user) %> </div>
 		</div>
-		<div class="col-md-6 container">
+
+		<div class="col-md-4 container">
 			<img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg" width="100px"/>
 
 		</div>
-		<div class="col-md-6 container"><br>
+		<div class="col-md-8 container"><br>
 			<table>
 				<tr>
-					<td class="col-*-6 col-xs-12 col-sm-12">Ton Pseudo</td>
-					<td class="col-*-6 col-xs-12 col-sm-12">
+					<td class="col-*-3 container">Pseudo:</td>
+					<td class="col-*-4 container">
 						<% if current_user.pseudo.nil?  %>
-						Ajouter un pseudo ?
+						Pas de pseudo
 						<% else %>
 						<%= current_user.pseudo %>
 						<% end %>
 					</td>
 				</tr>
 				<tr>
-					<td class="col-*-6 col-xs-12">Ton nom :</td>
-					<td class="col-*-6 col-xs-12"><%= current_user.name %></td>
+					<td class="col-*-3 container">Prénom :</td>
+					<td class="col-*-5 container"><%= current_user.name %></td>
 				</tr>
 				<tr>
-					<td class="col-*-6 col-xs-12">Ton Email :</td>
-					<td class="col-*-6 col-xs-12"><%= current_user.email %></td>
+					<td class="col-*-3 container">Nom :</td>
+					<td class="col-*-5 container">
+						<% if current_user.last_name.nil?  %>
+						Pas de nom de famille
+						<% else %>
+						<%= current_user.last_name %>
+						<% end %></td>
 				</tr>
 				<tr>
-					<td class="col-*-6 col-xs-12">Ton numéro de téléphone :</td>
-					<td class="col-*-6 col-xs-12">
+					<td class="col-*-3 container">Email :</td>
+					<td class="col-*-5 container"><%= current_user.email %></td>
+				</tr>
+				<tr>
+					<td class="col-*-3 container"> Téléphone :</td>
+					<td class="col-*-5 container">
 						<% if current_user.phone_number.nil?  %>
-						Ajouter mon numéro ?
+						Pas de numéro !
 						<% else %>
 						<%= current_user.phone_number %>
 						<% end %>
@@ -46,14 +57,5 @@
 		</div>
 	</div>
 
-	<div class="container" id="spacebox1">
-		<div class="title-perso"> 
-			<h2>Mes informations personnelles</h2> 		
-		</div>
-		<div class="col-6">
-		</div>
-		<div class="col-6">
-		</div>
-	</div>
 
 </section>

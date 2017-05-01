@@ -17,11 +17,11 @@
 
   <header id="header" role="banner" class="main-header">
     <div class="header-inner row">
-      <h1 class="col-sm-4"><a id="HPlink" href="/">WELCO</a></h1>
+      <h1 class="col-sm-4"><a id="HPlink" href="/">WELCOME</a></h1>
       <nav class="col-sm-8">
         <div id="login-logout">
           <% if current_user %>
-          Bonjour, <%= current_user.name.capitalize %> ! | <%= link_to "X", '/logout'%>
+          Bonjour, <%= current_user.name %> ! | <%= link_to "X", '/logout'%>
           <% else %>
           <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
           <% end %>

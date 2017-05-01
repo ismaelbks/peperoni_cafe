@@ -474,7 +474,8 @@ input[type=submit] {
 
 /* ESPACE PERSO */
 #Espaceperso {
-    background-color: #e0e0e0 
+    background-color: #e0e0e0;
+    padding-bottom: 200px;
 ;
 }
 
@@ -523,9 +524,10 @@ input[type=submit] {
     padding-bottom: 10px;
 }
 
-.title-perso h2 {
+.title-perso p {
     font-size: 2.5rem;
     color: #424242;
+    margin-top: 20px;
 }
 
 #spacebox1 {
@@ -533,6 +535,16 @@ input[type=submit] {
     color: #424242;
 }
 
+.link {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* EDIT USERS PAGE */
+.edit-user-form {
+    margin-bottom: 250px;
+    margin-top: 100px;
+}
 
 
 
