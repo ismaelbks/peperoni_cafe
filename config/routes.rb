@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get 'home/contact'
-
   get 'pages/home'
-
-  get 'pages/espace_perso'
 
   get 'pages/contact'
 

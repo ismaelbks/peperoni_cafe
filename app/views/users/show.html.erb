@@ -10,9 +10,8 @@
 			<div class="col-md-1 link"><%= link_to 'Edit', edit_user_url(current_user) %> </div>
 		</div>
 
-		<div class="col-md-4 container">
-			<img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg" width="100px"/>
-
+		<div class="col-md-4 container gravatar">
+			        <%= gravatar_for @user %>
 		</div>
 		<div class="col-md-8 container">
 			<table id="espacepersoinfos">
