@@ -33,9 +33,6 @@ header {
     z-index: 999;
     background-color: #4a187c;
     width:100%;
-    display: block;
-    top: 0;
-    overflow: hidden;
     box-shadow: 0px 2px 5px black;    
 }
 
@@ -76,6 +73,29 @@ header p {
     padding-right: 30px;
 }
 
+.alert {
+    height: 60px;
+    position: fixed;
+    text-align: center;
+    top: 60px;
+    vertical-align: center;
+    font-size: 3.5rem;
+}
+
+.alert-success {
+    background-color: #15D935;
+    color: white;
+    font-weight: 900;
+}
+
+
+.alert-danger, 
+.aler-error {
+    background-color: red;
+    color: white;
+    font-weight: 700;
+}
+
 
 #login-logout {
     color:#3EEC95;
@@ -86,7 +106,6 @@ header p {
 
 
 #jumbo {
-    display: flex;
     align-items: center;
     background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
     background-size: cover;
@@ -462,14 +481,20 @@ input[type=submit] {
 
 /* PAGE D'INSCRIPTION */
 #signup {
-    height: 400px;
-    margin-top: 250px;
-    margin-bottom: 110px;
+    margin-top: 150px;
+    margin-bottom: 170px;
+}
+
+.sign-up td {
+    height: 40px;
+}
+
+.right {
+    width: 100%;
 }
 
 #formulaire_sign_up {
     margin: 0 auto;
-    width: 700px
 }
 
 /* ESPACE PERSO */
@@ -570,4 +595,21 @@ input[type=submit] {
 .gravatar {
     text-align: center;
     width: 240px;
+}
+
+/* forms */
+
+#error_explanation {
+  color: #424242;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+}
+
+#button-form {
+    width: 95%;
 }

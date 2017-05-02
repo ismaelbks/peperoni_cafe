@@ -36,6 +36,9 @@
       </nav>
     </div>
   </header>
+  <% flash.each do |message_type, message| %>
+        <div class="alert jumbotron alert-<%= message_type %>"><p><%= message %></p></div>
+      <% end %>
 
 <%= yield %>
 
