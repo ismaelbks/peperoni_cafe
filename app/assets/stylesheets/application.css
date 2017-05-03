@@ -469,9 +469,8 @@ input[type=submit] {
 
 /* PAGE DE CONNEXION */
 #connexion {
-    height: 300px;
     margin-top: 200px;
-    margin-bottom: 240px;
+    margin-bottom: 280px;
 }
 
 .login {
@@ -479,10 +478,21 @@ input[type=submit] {
     font-weight: 500;
 }
 
+#nouveau-pepe {
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+#login-button {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+
 /* PAGE D'INSCRIPTION */
 #signup {
-    margin-top: 150px;
-    margin-bottom: 170px;
+    margin-top: 140px;
+    margin-bottom: 180px;
 }
 
 .sign-up td {
@@ -610,6 +620,7 @@ input[type=submit] {
 .field_with_errors {
 }
 
-#button-form {
-    width: 95%;
+#button-form-2 {
+    margin-top: 35px;
+    width: 60%;
 }

@@ -1,37 +1,31 @@
 
-<section class="row col-md-6 col-md-push-3 center" id="signup">
-	<div class="" id="formulaire_sign_up">
+<section id="signup">
+	<div class="row" id="formulaire_sign_up">
+		<div class="col-md-6 col-md-offset-3">
+			<center>
+			<h1>Inscris-Toi, Nouveau Pépéroner !</h1>
+			</center>
+			<br>
 
-	<h1>Inscrit-toi !</h1>
+	  		<%= form_for :user, url: '/users' do |f| %>
+			<%= render 'shared/error_messages' %>
 
-	<%= form_for :user, url: '/users' do |f| %>
-		<%= render 'shared/error_messages' %>
+				<%= f.label :name, "Prénom" %>
+				<%= f.text_field :name, class: 'form-control' %>
 
-		<table class="container sign-up">
-			<tr>
-				<td class="col-md-4">Prénom:</td>
-				<td class="col-md-8 right"><%= f.text_field :name %></td>
-			</tr>
-			<tr>
-				<td class="col-md-4">Email:</td>
-				<td class="col-md-8 right"><%= f.text_field :email %></td>
-			</tr>
-			<tr>
-				<td class="col-md-4">Mot de passe:</td>
-				<td class="col-md-8 right"><%= f.password_field :password %></td>
-			</tr>
-			<tr>
-				<td class="col-md-4">Confirmation du mot de passe:</td>
-				<td class="col-md-8 right"><%= f.password_field :password_confirmation %></td>
-			</tr>
-		</table>
-      	
-		<br>
-      	<%= f.submit "Create my account", class: "btn btn-primary", id: "button-form" %>
+				<%= f.label :email, "Email" %>
+				<%= f.text_field :email, class: 'form-control' %>
 
-      </div>
+				<%= f.label :password, "Mot de Passe" %>
+				<%= f.password_field :password, class: 'form-control' %>
 
-							
-	<% end %>
+				<%= f.label :password_confirmation, "Confirmation du Mot de Passe" %>
+				<%= f.password_field :password_confirmation, class: 'form-control' %>
 
-</section>
+				<center><%= f.submit "Create my account", class: "btn btn-primary", id: "button-form-2" %></center>
+
+				<% end %>
+
+			</div>
+		</div>
+	</section>

@@ -14,13 +14,14 @@ class SessionsController < ApplicationController
       flash[:success] = "C'est bon de te revoir, #{@user.name.capitalize} !"
     else
     # If user's login doesn't work, send them back to the login form.
-      redirect_to '/login'
+      flash.now[:danger] = 'Mauvaise combinaison email & mot de passe' # Not quite right!
+      render 'new'
     end
   end
 
   def destroy
-    session[:user_id] = nil
-    redirect_to '/'
+    log_out
+    redirect_to root_url
   end
 
 end

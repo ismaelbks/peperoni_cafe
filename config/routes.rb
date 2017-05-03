@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   # these routes are for showing users a login form, logging them in, and logging them out.
+  get '/signup' => 'users#new'
+  
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  get '/signup' => 'users#new'
   resources :users
 
 
