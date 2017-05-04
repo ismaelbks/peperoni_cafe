@@ -26,13 +26,13 @@ class UsersController < ApplicationController
 	def edit
     	@user = User.find(params[:id])
     	@title = 'Edition Profil'
-
-  	end
+    end
 
   	def update
   		@user = User.find(params[:id])
     	if @user.update_attributes(user_params)
-     		redirect_to root_path, notice: 'User was successfully created.'
+     		flash[:success] = "Informations mises à jour."
+     		redirect_to user_url     		
     	else
       		render 'edit'
     	end

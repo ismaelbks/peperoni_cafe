@@ -586,8 +586,18 @@ input[type=submit] {
 
 /* EDIT USERS PAGE */
 .edit-user-form {
-    margin-bottom: 250px;
+    margin-bottom: 100px;
     margin-top: 100px;
+}
+
+.gravatar_edit img {
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.gravatar_edit img:hover {
+    opacity: 0.9;
 }
 
 /*  USERS SHOW PAGE */
