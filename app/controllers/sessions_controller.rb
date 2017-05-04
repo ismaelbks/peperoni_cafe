@@ -10,8 +10,8 @@ class SessionsController < ApplicationController
       # Save the user id inside the browser cookie. This is how we keep the user 
       # logged in when they navigate around our website.
       session[:user_id] = @user.id
-      redirect_to '/pages/home'
       flash[:success] = "C'est bon de te revoir, #{@user.name.capitalize} !"
+      redirect_to '/pages/home'
     else
     # If user's login doesn't work, send them back to the login form.
       flash.now[:danger] = 'Mauvaise combinaison email & mot de passe' # Not quite right!
