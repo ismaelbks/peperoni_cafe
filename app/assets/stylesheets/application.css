@@ -1,0 +1,626 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+* {
+    overflow-x:hidden;
+    /*border: solid 1px black;*/
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    padding-top: 5px;
+    padding-left: 40px;
+    position: fixed;
+    height: 60px;
+    z-index: 999;
+    background-color: #4a187c;
+    width:100%;
+    box-shadow: 0px 2px 5px black;    
+}
+
+header .row,
+footer .row {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 800;
+    margin: 0;
+    color: #3EEC95;
+    padding-top: 5px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header a {
+        color: #3EEC95;
+        font-size: 1.1em;
+}
+
+header a:hover {
+        color: #3EEC95;
+        font-size: 1.1em;
+        font-weight: 500;
+        text-decoration: none;
+        transition: 0.6s;
+}
+
+header p {
+    padding: 0 20px;
+    margin: 0;
+    padding-right: 30px;
+}
+
+.alert {
+    height: 60px;
+    position: fixed;
+    text-align: center;
+    top: 60px;
+    vertical-align: center;
+    font-size: 3.5rem;
+}
+
+.alert-success {
+    background-color: #15D935;
+    color: white;
+    font-weight: 900;
+}
+
+
+.alert-danger, 
+.aler-error {
+    background-color: red;
+    color: white;
+    font-weight: 700;
+}
+
+
+#login-logout {
+    color:#3EEC95;
+    margin-right: 20px;
+    padding-right: 5px;
+
+}
+
+
+#jumbo {
+    align-items: center;
+    background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
+    background-size: cover;
+    color: rebeccapurple;
+    height: 760px;
+    text-shadow: 0.25px 0.25px 0.25px #000000;
+    z-index: -1;
+    width: 100%;
+    position: fixed;
+
+}
+
+#jumbi {
+    margin-top : 330px;
+    position: relative;
+    overflow: none;
+}
+
+#jumbi h2 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    color: #3EEC95;
+    text-shadow: 2px 2px 5px black;
+}
+
+#jumbi h3 {
+    margin: 20px 0 20px;
+    color: #3EEC95;
+    text-shadow: 2px 2px 5px black;
+
+}
+
+img:hover {
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+img {
+    margin: 0 0 50px;
+    width: 100%;
+}
+
+#movance a {
+    left: 200px;
+    position: relative;
+    z-index: 1000;
+    opacity: 0.5;
+}
+
+#movance {
+    padding-top: 75px;
+    margin-top: 300px;
+    position: relative;
+    padding-bottom: 0px;
+    background-color: azure;
+    padding-bottom: 40px;
+}
+#movance p {
+    font-family: Optima, sans-serif;
+    font-size: 1.75em;
+    padding-left: 50px;
+    color: #3EEC95;
+    font-weight: 600;
+}
+
+#movance #otherp {
+    color: #4a187c;
+    position:relative;
+    top:0px;
+}
+
+#texta {
+    margin: auto auto;
+    background-color: aquamarine;
+    display: block;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.text {
+    font-size: 18px;
+    color: darkblue;
+    display: block;
+    margin-bottom: 25px;
+    text-align: justify;
+    position:relative;
+    padding:0 30px;
+}
+
+#texthor {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    color: #FFF;
+    display: block;
+    padding-top: 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#firsty {
+    margin-bottom: 100px;
+}
+#cube {
+    background-color: #3EEC95;
+    position: relative;
+}
+
+#imgcuba {
+    margin: 0;
+    padding: 0;
+}
+
+#seconde {
+    height: 400px;
+    margin: 0;
+}
+
+#seconde img:hover {
+    opacity: 0.0;
+}
+
+#third {
+    margin-top: 50px;
+}
+#storytext {
+    background-color: #4a187c;
+    padding: 40px 80px;
+    color: aquamarine;
+    font-size: 15px;
+    text-align: justify;
+    margin:45px 0;
+}
+.col-sm-6 {
+}
+
+.col-md-6 {
+}
+
+.btn.btn-primary {
+    border-radius: 2px;
+    border: 0px;
+    color: #4a187c;
+    text-shadow: none;
+    background-color: #3EEC95;
+    width: 200px;
+}
+
+.btn.btn-primary:hover {
+    color: #ffffff;
+    background-color: #4a187c;
+    transition: 0.5s;
+}
+
+.btn-secondary {
+    background-color: #E8DFE0;
+    color: #ffffff;
+    margin: 0 0 30px;
+}
+
+footer {
+    font-size: 12px;
+    clear: both;
+    float: inherit;
+    position: relative;
+    display: inline-block;
+    bottom: Opx;
+    background-color: #4a187c;
+    height: 80px;
+    overflow: hidden;
+    margin-top: -30px;
+}
+
+footer .col-sm-8 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+
+footer .col-sm-4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #3EEC95;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li img {
+    width: 32px;
+    height: 32px;
+}
+
+footer li img:hover {
+    width: 35px;
+    height: 35px;
+}
+
+
+/* PAGE => MES PRESTATION */
+
+.Mysection {
+    height: 1826px;
+    margin-top: 100px;
+    background-color: aliceblue;
+}
+
+.headtitle {
+    height: 100px;
+    color: #4a187c;
+    width: 110%;
+}
+
+.centrage {
+    text-align: center;
+}
+
+.Mysection img {
+}
+
+.Asider {
+    margin-top: 100px;
+    height: 1500px;
+    position: relative;
+    float: right;
+    text-align: center;
+    background-color: aquamarine;
+    overflow-y: scroll;
+}
+
+.siders {
+    margin-top: 50px;
+    height: auto;
+    position:relative;
+    text-align: center;
+}
+
+.siders img {
+    width: 90%;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.siders h3 {
+    color: #4a187c;
+}
+
+.siders-littletext {
+    text-align: justify;
+    width: 90%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.siders img:hover {
+    opacity: 0.9;
+}
+
+.Bsiders {
+    height: 300px;
+    background-color: bisque;
+    margin-top: 26px;
+    text-align: center;
+    display: block;
+    clear: right;
+}
+
+.Bsiders iframe {
+    margin-top: 15px;
+}
+/* PAGE = CONTACT */
+
+#formulaire {
+    position: relative;
+    font-family: roboto;
+    color: white;
+    margin-top: 120px;
+    margin-bottom: 90px;
+    background-color:#4a187c;
+    border-top: solid 9px #3EEC95;
+    border-bottom: solid 9px #3EEC95;
+}
+
+
+#titre-contact {
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.paragraph {
+  margin-top: 0px;
+  margin-left: 40px;
+}
+ 
+fieldset {
+}
+
+.fieldset {
+    margin: 0px 7%;
+}
+ 
+.legend {
+  padding: 0px 3px;
+  font-weight: medium;
+  color: white;
+  font-family: Roboto;
+}
+ 
+label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+ 
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #3EEC95;
+}
+ 
+input, textarea {
+  width: 249px;
+  border-radius: 2%;
+}
+ 
+textarea {
+  height: 100px;
+  width: 250px;
+}
+ 
+select {
+  width: 254px;
+  color: black;
+  padding: 10px;
+  margin-top: 10px;
+}
+ 
+input[type=checkbox] {
+  width: 10px;
+  color: black;
+}
+ 
+input[type=submit] {
+  width: 150px;
+  color: black;
+  padding: 10px;
+}
+
+#localisation {
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+
+/* PAGE DE CONNEXION */
+#connexion {
+    margin-top: 200px;
+    margin-bottom: 280px;
+}
+
+.login {
+    width: 380px;
+    font-weight: 500;
+}
+
+#nouveau-pepe {
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+#login-button {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* PAGE D'INSCRIPTION */
+#signup {
+    margin-top: 140px;
+    margin-bottom: 180px;
+}
+
+.sign-up td {
+    height: 40px;
+}
+
+.right {
+    width: 100%;
+}
+
+#formulaire_sign_up {
+    margin: 0 auto;
+}
+
+/* ESPACE PERSO */
+#Espaceperso {
+    background-color: #e0e0e0;
+    padding-bottom: 200px;
+;
+}
+
+#perso-backg {
+    background-color: #7b1fa2;
+    height: 100px;
+    margin-top: 55px;
+    padding-left: 5%;
+    color: #e0e0e0;
+    padding-top:10px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+#spacebox1 {
+    border: 2px solid gray;
+    margin-top: 20px; 
+    border-radius: 2px;   
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+#spacebox1 img {
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#spacebox1 img:hover {
+    opacity: 0.95;
+}
+
+.title-perso {
+    background-color: #aeaeae;
+    margin: 0px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.title-perso p {
+    font-size: 2.5rem;
+    color: #424242;
+    margin-top: 20px;
+}
+
+#spacebox1 {
+    font-size: 2rem;
+    color: #424242;
+}
+
+.link {
+    position: relative;
+    margin-top: 20px;
+}
+
+#espacepersoinfos  {
+    margin-top: 20px;
+}
+
+
+#espacepersoinfos td {
+    height: 40px;
+}
+
+/* EDIT USERS PAGE */
+.edit-user-form {
+    margin-bottom: 250px;
+    margin-top: 100px;
+}
+
+/*  USERS SHOW PAGE */
+#showbkg {
+    margin-top: 100px;
+    margin-bottom: 350px;
+    font-size: 2.0rem;
+}
+
+#showbkg hr {
+    font-weight: 500;
+    color: black;
+}
+
+.gravatar {
+    text-align: center;
+    width: 240px;
+}
+
+/* forms */
+
+#error_explanation {
+  color: #424242;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+}
+
+#button-form-2 {
+    margin-top: 35px;
+    width: 60%;
+}

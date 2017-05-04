@@ -1,0 +1,48 @@
+
+<section class="container" id="formulaire">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <p id="titre-contact">Dîtes-nous tout.</p>
+      <form action="#">
+        <p class="paragraph"><i>Les champs marqués par </i><em>*</em> sont <em>obligatoires</em></p>
+        <div class ="fieldset">
+          <fieldset>
+            <h3 class="legend">Vos Coordonnées</h3>
+            <hr>
+              <label for="nom">Nom <em>*</em></label>
+              <!--//placeholder: indication grisée 
+              //required: il faut renseigner le champs sinon la validation est bloquée
+              //autofocus: le curseur est positionné dans cette case au chargement de la page -->
+              <input id="nom" placeholder="&nbsp;&nbsp;&nbsp;..." required="" style="color:black"><br>
+              <label for="telephone">Portable</label>
+              <!--// type="tel": bascule le clavier sur un smartphone
+              // pattern: expression régulière à vérifier pour pouvoir valider -->
+              <input id="telephone" type="tel" placeholder="&nbsp;&nbsp;&nbsp;..." pattern="06[0-9]{8}" style="color:black"><br>
+              <label for="email">Email <em>*</em></label>
+              <input id="email" type="email" placeholder="&nbsp;&nbsp;&nbsp;..." required="" style="color:black"><br>
+          </fieldset>
+          <br><br>
+          <fieldset>
+            <h3 class="legend">Informations personnelles</h3>
+            <hr>
+              <label for="age">Age<em>*</em></label>
+              <!--// type="number": bascule le clavier sur un smartphone-->
+              <input id="age" type="number" placeholder="&nbsp;&nbsp;&nbsp;..." pattern="[0-9]{2}" style="color:black" required=""><br>
+              <label for="sexe">Sexe</label>
+              <select id="sexe" style="color:black">
+                <option value="F" name="sexe">Homme</option>
+                <option value="H" name="sexe">Femme</option>
+                <option value="X" name="sexe">Autre</option>
+              </select><br>
+              <label for="comments">Qu'avez vous de tellement intéressant à nous dire ?</label>
+              <textarea id="comments" placeholder="&nbsp;&nbsp;&nbsp;..." style="color:black"></textarea>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-6" id="localisation">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.047203616199!2d2.323221651327953!3d48.876376679187636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e359d9d0083%3A0x5b6b5970603d3000!2sParis+Saint-Lazare!5e0!3m2!1sfr!2sfr!4v1492873303127" width="100%" height="550px" frameborder="none" style="border:none" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

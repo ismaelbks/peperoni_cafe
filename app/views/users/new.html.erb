@@ -1,0 +1,31 @@
+
+<section id="signup">
+	<div class="row" id="formulaire_sign_up">
+		<div class="col-md-6 col-md-offset-3">
+			<center>
+			<h1>Inscris-Toi, Nouveau Pépéroner !</h1>
+			</center>
+			<br>
+
+	  		<%= form_for :user, url: '/users' do |f| %>
+			<%= render 'shared/error_messages' %>
+
+				<%= f.label :name, "Prénom" %>
+				<%= f.text_field :name, class: 'form-control' %>
+
+				<%= f.label :email, "Email" %>
+				<%= f.text_field :email, class: 'form-control' %>
+
+				<%= f.label :password, "Mot de Passe" %>
+				<%= f.password_field :password, class: 'form-control' %>
+
+				<%= f.label :password_confirmation, "Confirmation du Mot de Passe" %>
+				<%= f.password_field :password_confirmation, class: 'form-control' %>
+
+				<center><%= f.submit "Create my account", class: "btn btn-primary", id: "button-form-2" %></center>
+
+				<% end %>
+
+			</div>
+		</div>
+	</section>

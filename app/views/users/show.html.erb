@@ -1,0 +1,66 @@
+<section class="" id="Espaceperso">
+
+	<div class="row" id="perso-backg">
+		<h1>Ton espace personnel</h1>
+	</div>
+
+	<div class="container no-gutters" id="spacebox1">
+		<div class="title-perso col-md-12">
+			<div class="col-md-11"><p>Mes informations personnelles</p></div>
+			<div class="col-md-1 link"><%= link_to 'Edit', edit_user_url(current_user) %> </div>
+		</div>
+
+		<div class="col-md-4 container gravatar">
+			        <%= gravatar_for @user %>
+		</div>
+		<div class="col-md-8 container">
+			<table id="espacepersoinfos">
+				<tr>
+					<td class="col-*-3 container">Pseudo:</td>
+					<td class="col-*-5 container">
+						<% if current_user.pseudo.nil?  %>
+						Pas de pseudo
+						<% else %>
+						<%= current_user.pseudo.capitalize %>
+						<% end %>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-*-3 container">Prénom :</td>
+					<td class="col-*-5 container"><%= current_user.name %></td>
+				</tr>
+				<tr>
+					<td class="col-*-3 container">Nom :</td>
+					<td class="col-*-5 container">
+						<% if current_user.last_name.nil?  %>
+						Pas de nom de famille
+						<% else %>
+						<%= current_user.last_name %>
+						<% end %></td>
+				</tr>
+				<tr>
+					<td class="col-*-3 container">Email :</td>
+					<td class="col-*-5 container"><%= current_user.email %></td>
+				</tr>
+				<tr>
+					<td class="col-*-3 container"> Téléphone :</td>
+					<td class="col-*-5 container">
+						<% if current_user.phone_number.nil?  %>
+						Pas de numéro !
+						<% else %>
+						<%= current_user.phone_number %>
+						<% end %>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-*-3 container"> Arrivée :</td>
+					<td class="col-*-5 container">
+						<%= current_user.created_at.strftime("%d/%m/%y") %>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+</section>
