@@ -19,16 +19,16 @@
       <%= f.label :pseudo %>
       <%= f.text_field :pseudo, class: 'form-control' %>
 
-      <%= f.label :phone_number %>
+      <%= f.label :phone_number, "Téléphone" %>
       <%= f.phone_field :phone_number, class: 'form-control' %>
 
       <br>
       <div><center>Pas besoin de réecrire ton mot de passe si tu ne souhaites pas les changer </center></div>      
 
-      <%= f.label :password %>
+      <%= f.label :password, "Mot de passe" %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Confirmation du mot de passe" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
       <br>
     <center>

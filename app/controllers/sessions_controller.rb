@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)  
       flash[:success] = "C'est bon de te revoir, #{user.name.capitalize} !"
-      redirect_to root_url
+      redirect_back_or root_url
+
     else
     # If user's login doesn't work, send them back to the login form.
       flash.now[:danger] = 'Mauvaise combinaison email & mot de passe' # Not quite right!

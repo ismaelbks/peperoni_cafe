@@ -1,0 +1,31 @@
+<section class="container" id="index-users">
+	<div class="row">
+
+		<h1>La Communauté Pépéroner</h1>
+		<br>
+		<%= will_paginate %>
+
+		<ul class="users">
+		  <% @users.each do |user| %>
+		   <div class="col-lg-3 col-sm-6 col-md-4 col-xs-12 users-bkg1"> 
+			   	
+		   		<div class="users-bkg2"
+				   	<li>
+				      <%= gravatar_for user, size: 130 %>
+				      <h2 class="pseudo-index">
+				      	<% if user.pseudo.nil? %>
+				      	<% elsif user.pseudo == "" %>
+				      	<% else %>
+				      		<%= "#"+user.pseudo %>			      	
+				      	<% end %>
+				      </h2>				      
+				      <p><%= user.name.capitalize %></p>
+				    </li>
+				</div>
+			</div>
+		  <% end %>
+		</ul>
+		<%= will_paginate %>
+	</div>	
+
+</section>
