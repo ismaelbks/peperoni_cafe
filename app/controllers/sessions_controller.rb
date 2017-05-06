@@ -4,14 +4,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_email(params[:email])
-    # If the user exists AND the password entered is correct.
-    if @user && @user.authenticate(params[:password])
+    user = User.find_by(email: params[:session][:email].downcase)
+    # If the user exists AND the password entered is correct.    
+    if user && user.authenticate(params[:session][:password])
+      log_in user
+      remember user
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+
       # Save the user id inside the browser cookie. This is how we keep the user 
       # logged in when they navigate around our website.
-      session[:user_id] = @user.id
-      flash[:success] = "C'est bon de te revoir, #{@user.name.capitalize} !"
-      redirect_to '/pages/home'
+      redirect_to root_url
+      flash[:success] = "C'est bon de te revoir, #{user.name.capitalize} !"
     else
     # If user's login doesn't work, send them back to the login form.
       flash.now[:danger] = 'Mauvaise combinaison email & mot de passe' # Not quite right!
@@ -20,7 +23,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 

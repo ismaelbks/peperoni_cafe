@@ -473,19 +473,9 @@ input[type=submit] {
     margin-bottom: 280px;
 }
 
-.login {
-    width: 380px;
-    font-weight: 500;
-}
-
-#nouveau-pepe {
-    font-weight: 500;
-    margin-top: 50px;
-}
-
-#login-button {
-    margin-top: 30px;
-    margin-bottom: 25px;
+.checkbox-inline {
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 

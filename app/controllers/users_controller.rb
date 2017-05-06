@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+	def show
+		@user = User.find(params[:id])
+		@title = 'Profil'
+	end
+
 	def new
 		@user = User.new
 		@title = 'Nouveau Profil'
@@ -8,20 +13,15 @@ class UsersController < ApplicationController
 	def create
 	  @user = User.new(user_params)
 	  if @user.save
-	  	flash[:success] = "Bienvenue parmis les Péperoner !"
+	  	log_in @user
+	  	flash[:success] = "Bienvenue parmi les Péperoner !"
         UserMailer.welcome_email(@user).deliver_later
 	    session[:user_id] = @user.id
-        redirect_to root_path, notice: 'User was successfully created.'
+        redirect_to root_path
 	  else
         render :new
 	  end
 	end
-
-	def show
-		@user = User.find(params[:id])
-		@title = 'Profil'
-	end
-
 
 	def edit
     	@user = User.find(params[:id])

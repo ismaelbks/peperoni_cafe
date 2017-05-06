@@ -1,22 +1,29 @@
+<% provide(:title, "Log in") %>
+
+
 <section class="container col-lg-12 text-center" id="connexion">
 
-	<h1>Connectez-vous !</h1>
+	<div class="row">
+	  <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
+	  	<h1>Connectez-vous !</h1>
+	    <%= form_for(:session, url: login_path) do |f| %>
 
-	<%= form_tag '/login' do %>
-		<center>
-		  <table class="login">
-		  	<tr>
-		  		<td><br>Email:</td>
-		  		<td><br><%= text_field_tag :email %></td>
-			</tr>
-			<tr>
-				<td><br>Mot de passe:</td> 
-				<td><br><%= password_field_tag :password %></td>
-			<tr><br>
-		 	    <td colspan="2"><center><br><%= submit_tag "Connexion" %><center></td>
-		  	</tr>
-		  </table>
-		</center>
-	<% end %>
+	      <%= f.label :'email' %>
+	      <%= f.email_field :email, class: 'form-control' %>
+
+	      <%= f.label :'mot de passe' %>
+	      <%= f.password_field :password, class: 'form-control' %>
+	      	<br>
+	      <%= f.label :remember_me, class: "checkbox-inline" do %>
+	        <%= f.check_box :remember_me %>
+	        <span>Rester connecté ?</span>
+	      <% end %>
+			<br><br>
+	      <%= f.submit "Log in", class: "btn btn-primary" %>
+	    <% end %>
+	    <br>
+	    <p>Nouveau Peperoner ? <%= link_to "Rejoins-nous !", signup_path %></p>
+	  </div>
+	</div>	
 
 </section>
