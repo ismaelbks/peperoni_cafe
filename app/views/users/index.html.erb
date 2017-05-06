@@ -19,7 +19,11 @@
 				      		<%= "#"+user.pseudo %>			      	
 				      	<% end %>
 				      </h2>				      
-				      <p><%= user.name.capitalize %></p>
+				      <p><%= user.name.capitalize %>
+			      	  	<% if current_user.admin? && !current_user?(user) %>
+					  	| <%= link_to "X", user, method: :delete, data: { confirm: "Certain ?" } %>
+						<% end %>
+					  </p>
 				    </li>
 				</div>
 			</div>
