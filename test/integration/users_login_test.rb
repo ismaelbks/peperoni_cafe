@@ -19,9 +19,8 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 	end
 
 	test "login with valid information" do
-	    post login_path, params: { email:    @user.email,
-	                                          password: 'password' }
-  	    assert_redirected_to '/pages/home'
+	    post login_path, params: { session: { email: @user.email, password: "password" } }
+  	    assert_redirected_to root_url
   	    follow_redirect!
 	    assert_template 'pages/home'
 	    assert_select "a[href=?]", login_path, count: 0
@@ -30,9 +29,9 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   	end
 
 	test "login with valid information followed by logout" do
-	   get login_path
-	    post login_path, params: { session: { email:    @user.email,
-	                                          password: 'password' } }
+	    get login_path
+	    post login_path, params: { session: { email: @user.email, password: "password" } }
+  	    assert_redirected_to root_url
 	    assert is_logged_in?
 	    assert_redirected_to root_url
 	    follow_redirect!
@@ -60,7 +59,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     	# Log in to set the cookie.
     	log_in_as(@user, remember_me: '1')
     	# Log in again and verify that the cookie is deleted.
-    	log_in_as(@user, remember_me: '0')
+   		log_in_as(@user, remember_me: '0')
     	assert_empty cookies['remember_token']
   	end
 
