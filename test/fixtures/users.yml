@@ -28,7 +28,7 @@ malory:
   name:  malory
   email: boss@example.gov
   password_digest: <%= User.digest('password') %>
-  activated: true
+  activated: false
   activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>

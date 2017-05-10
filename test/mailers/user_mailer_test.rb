@@ -14,5 +14,8 @@ class UserMailerTest < ActionMailer::TestCase
     assert_match CGI.escape(user.email),  mail.body.encoded
   end
 
+  #test 'welcome_email' do
+  #  user = users(:malory)
+  #end
 
 end

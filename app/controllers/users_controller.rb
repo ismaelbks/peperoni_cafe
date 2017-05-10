@@ -32,13 +32,6 @@ class UsersController < ApplicationController
   		end
 	end
 
-		#Fonctionnalité à remettre plus tard !
-		#log_in @user
-		#flash[:success] = "Bienvenue parmi les Péperoner !"
-        #UserMailer.welcome_email(@user).deliver_later
-        #session[:user_id] = @user.id
-        #redirect_to root_path
-
 	def edit
     	@user = User.find(params[:id])
     	@title = 'Edition Profil'
@@ -56,7 +49,6 @@ class UsersController < ApplicationController
 
 
   #before_filter
-
 
    # Confirms the correct user.
   def correct_user

@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
     @user = user
     @url  = 'https://peperoni-cafe.herokuapp.com/login'
-    mail to: user.email, subject: 'Bienvenue sur le Peperoni Cafe'
+    mail to: @user.email, subject: 'Bienvenue sur le Peperoni Cafe'
   end
 
   def account_activation(user)
