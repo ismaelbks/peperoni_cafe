@@ -191,7 +191,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
-  puma (~> 3.7)
+  puma
   rails (~> 5.1.0.rc2)
   rails-controller-testing
   sass-rails (~> 5.0)

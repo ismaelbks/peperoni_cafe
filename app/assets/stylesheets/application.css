@@ -607,6 +607,10 @@ input[type=submit] {
     width: 240px;
 }
 
+.gravatar img {
+    border-radius: 5px;
+}
+
 /*  USER INDEX */
 .users {
     margin-top: 0px;

@@ -1,0 +1,7 @@
+UserMailer#account_activation
+
+Salut <%= @user.name %>,
+
+Bienvenue dans le péperoni-café ! Pour devenir définivement un péperoner, active ton compte en cliquant sur ce lien :
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'contact@peperoni-cafe.com'
+  default from: 'no-reply@peperoni-cafe.com'
   layout 'mailer'
   
 end

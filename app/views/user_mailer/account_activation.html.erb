@@ -1,17 +1,17 @@
-
 <div style="background-color:purple; height:50px; width=100%"></div>
 
 <section style="background-color:lightgrey; content:center; padding: 30px 30px 50px 10%; overflox-x:none; width=100%;">
   <h1 style="color:purple; ">Bienvenue sur le Pépéroni - Café, <%= @user.name.capitalize %>!</h1>
   <p>
-    Ton inscription a l'air de s'être bien passée, sinon tu ne lirais pas ce mail.
-    <br>
-    Ton identifiant est : <%= @user.email %>, c'est aussi ton email d'ailleurs.<br>
+	<br>
+	Pour devenir définivement un péperoner, active ton compte en cliquant sur ce lien :
+    <br><br>
+    <%= link_to "Activer ton compte", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
   </p>
   <p>
-    Pour te connecter au site, <a href="<%= @url %>"> clique ici.</a> 
   </p>
-  <p>Merci de nous avoir rejoint et à très bientôt !</p>
+  <p>Nous te confirmerons par mail l'activation définitive de ton compte !</p>
   </section>
 
 <div style="background-color:purple; height:50px; width=100%"></div>
