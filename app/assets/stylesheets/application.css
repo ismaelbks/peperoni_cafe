@@ -625,6 +625,7 @@ input[type=submit] {
 #index-users {
     margin-top: 100px;
     margin-bottom: 100px;
+    min-height: 70vh;
 }
 .users h2 {
     font-size: 20px;
@@ -676,4 +677,20 @@ input[type=submit] {
 #button-form-2 {
     margin-top: 35px;
     width: 60%;
+}
+
+/* Reset MDP */
+#reset {
+    padding-top: 25vh;
+    height: 90vh;
+    width: 80%;
+    margin-left: 10%;
+}
+
+/* EDIT PASSWORD */
+#edit-password {
+    min-height: 90vh;
+    padding-top: 20vh;
+    width: 80%;
+    margin-left: 10%;
 }

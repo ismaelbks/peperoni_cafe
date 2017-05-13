@@ -12,6 +12,7 @@
 	      <%= f.email_field :email, class: 'form-control' %>
 
 	      <%= f.label :'mot de passe' %>
+
 	      <%= f.password_field :password, class: 'form-control' %>
 	      	<br>
 	      <%= f.label :remember_me, class: "checkbox-inline" do %>
@@ -23,6 +24,7 @@
 	    <% end %>
 	    <br>
 	    <p>Nouveau Peperoner ? <%= link_to "Rejoins-nous !", signup_path %></p>
+	    <p>Mot de passe oublié ? <%= link_to "Réinitalise-le !", new_password_reset_path %></p>
 	  </div>
 	</div>	
 
