@@ -3,10 +3,8 @@ class AccountActivationsController < ApplicationController
   def edit
     user = User.find_by(email: params[:email])
     if user && !user.activated? && user.authenticated?(:activation, params[:id])
-      user.update_attribute(:activated,   true)
-      user.update_attribute(:activated_at, Time.zone.now)
+      user.activate
       #Welcome_email
-      UserMailer.welcome_email(user).deliver_now
       log_in user
       flash[:success] = "Votre compte est activé. Bienvenue dans la communauté."
       redirect_to user
